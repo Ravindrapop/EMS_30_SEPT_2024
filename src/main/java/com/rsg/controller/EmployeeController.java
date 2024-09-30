@@ -15,7 +15,7 @@ public class EmployeeController {
 	@PostMapping("createEmployee")
 	public String createEmployee(@RequestBody Employee employee ) {
 		System.out.println(employee);
-		return "Hi good morning all!!!";
+		return "Employee profile has been create successfully!!!";
 	}
 	
 	@RequestMapping("/studentinfo")
