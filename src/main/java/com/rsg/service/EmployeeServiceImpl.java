@@ -1,0 +1,26 @@
+package com.rsg.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.rsg.model.Employee;
+import com.rsg.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+	private EmployeeRepository employeeRepository;
+
+	@Override
+	public String createEmployee(Employee employee) {
+
+		System.out.println("Employee Service Impl " + employee);
+		
+		employeeRepository.save(employee);
+		
+		return "Employee profile has been created successfully!!!";
+
+	}
+
+}
