@@ -42,6 +42,10 @@ public class Employee {
 	@Column(name="Address")
 	private String address;
 	
+	public Employee() {
+		
+	}
+	
 	public Employee(Integer id, String firstName, String lastName, int age, String education, String department,
 			double salary, String contact, LocalDate dateOfJoining, String designation, String address) {
 		super();
