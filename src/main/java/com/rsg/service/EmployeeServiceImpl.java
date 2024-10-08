@@ -32,5 +32,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		return listEmployee;
 	}
+	
+	@Override
+	public String deleteEmployee(Integer id) {
+		System.out.println("Employee Service Impl : "+id);
+		
+		employeeRepository.deleteById(id);
+		
+		return "Employee has been deleted successfully!!!";
+	}
 
 }
